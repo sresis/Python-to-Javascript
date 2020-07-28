@@ -10,4 +10,18 @@ const melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                  'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba',
                  'Watermelon', 'Santa Claus', 'Casaba'];
 
-function countMelons(melonList):
+function countMelons(melonList) {
+	
+	let melonCounts = {};
+	for (const melon of melonList) {
+		console.log(melon);
+		if (melon in melonCounts) {
+			melonCounts[melon] = melonCounts[melon] + 1;
+		} else  {
+			melonCounts[melon] = 1;
+		}
+	}
+
+	return melonCounts;
+}
+console.log(countMelons(melonsToAdd))
