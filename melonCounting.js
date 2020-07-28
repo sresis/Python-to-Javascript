@@ -10,10 +10,13 @@ const melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                  'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba',
                  'Watermelon', 'Santa Claus', 'Casaba'];
 
-function countMelons(melonList) {
+function countMelons(melonArray) {
+//Take in a list and return a dictionary of # of melons by melon type.
+
 	
-	let melonCounts = {};
-	for (const melon of melonList) {
+	const melonCounts = {};
+
+	for (const melon of melonArray) {
 		console.log(melon);
 		if (melon in melonCounts) {
 			melonCounts[melon] = melonCounts[melon] + 1;
